@@ -43,12 +43,24 @@ module.exports = {
 					}
 				},
 			}, {
+				test: /\.css$/,
+				use: [
+					{
+						loader: 'style-loader'
+					}, {
+						loader: 'css-loader'
+					}
+				]
+			}, {
 				test: /\.vue$/,
 				use: [
 					{
 						loader: 'vue-loader'
 					}
 				]
+			}, {
+				test: /\.(eot|svg|ttf|woff|woff2)(\?\S*)?$/,
+				loader: 'file-loader'
 			}
 		]
 	},

@@ -1,22 +1,17 @@
-
 <template>
-	<div>
-
-	<div>{{name}}</div>
-	<button @click="click">test</button>
-	</div>
+	<el-button @click="click" size="medium">{{name}}</el-button>
 </template>
 
 <script>
 export default {
 	data() {
 		return {
-			name: 'this is a testdd'
+			name: 'test'
 		}
 	},
 	methods: {
 		click() {
-			alert('click')
+			this.name = 'this is a test'
 		}
 	}
 }
