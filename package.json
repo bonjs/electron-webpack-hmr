@@ -14,7 +14,11 @@
     "hmr"
   ],
   "license": "MIT",
-  "dependencies": {},
+  "dependencies": {
+    "vue": "^2.5.17",
+    "vue-cli": "^2.9.6",
+    "vue-loader": "^15.4.2"
+  },
   "devDependencies": {
     "babel-core": "^6.26.0",
     "babel-loader": "^7.1.2",
@@ -22,6 +26,7 @@
     "babel-preset-env": "^1.6.1",
     "babel-preset-latest": "^6.24.1",
     "html-webpack-plugin": "^3.2.0",
+    "vue-template-compiler": "^2.5.17",
     "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"

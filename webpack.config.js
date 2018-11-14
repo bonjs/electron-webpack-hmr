@@ -1,5 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
+const VueLoaderPlugin = require('vue-loader/lib/plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
 module.exports = {
@@ -13,6 +14,7 @@ module.exports = {
 	},
 	plugins: [
 		new webpack.HotModuleReplacementPlugin(),
+		new VueLoaderPlugin(),
 		new HtmlWebPackPlugin({
 			template: "./index.html",
 			filename: "./index.html",
@@ -40,7 +42,19 @@ module.exports = {
 						presets: ['latest'] //按照最新的ES6语法规则去转换
 					}
 				},
-			},
+			}, {
+				test: /\.vue$/,
+				use: [
+					{
+						loader: 'vue-loader'
+					}
+				]
+			}
 		]
 	},
+	resolve: {
+		alias: {
+			'vue': 'vue/dist/vue.common.js'
+		}
+	}
 }

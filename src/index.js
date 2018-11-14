@@ -1,7 +1,14 @@
 
 
-var app = require('./App')
-document.getElementById('app').innerHTML = app;
+import Vue from 'vue';
+import App from './App.vue';
+
+new Vue({
+	el: '#app',
+	render: function(h) {
+		return h(App);
+	}
+})
 
 
 module.hot.accept();
